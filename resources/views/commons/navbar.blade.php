@@ -6,6 +6,11 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         
+        /**<ul class="nav navbar-nav navbar-right">
+            <li>{!! link_to_route('signup.get', 'Signup', [], ['class' => 'nav-link']) !!}</li>
+               <li><a href="#">Login</a></li>
+        */</ul>
+        
         <div class="collapse navbar-collapse" id="nav-bar">
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav">
