@@ -18,10 +18,10 @@
                     {!! Form::label('status', 'ステータス:') !!}
                     {!! Form::text('status', null, ['class' => 'form-control']) !!}
                 </div>
-        
-                {!! Form::submit('登録', ['class' => 'btn btn-primary']) !!}
-        
-            {!! Form::close() !!}
+                
+                    {!! Form::submit('登録', ['class' => 'btn btn-primary']) !!}
+                    {!! Form::close() !!}
+
         </div>
     </div>
 

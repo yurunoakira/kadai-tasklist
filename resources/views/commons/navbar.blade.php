@@ -13,12 +13,12 @@
             <ul class="navbar-nav">
                 @if (Auth::check())
                 <li class="nav-item">{!! link_to_route('tasks.create', '新規タスクの投稿', [], ['class' => 'nav-link']) !!}</li>
-                
+                <li class="nav-item">{!! link_to_route('logout.get', 'Logout',[], ['class' => 'nav-link']) !!}</li>
                 @else
-                //<ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
                     <li>{!! link_to_route('signup.get', 'Signup', [], ['class' => 'nav-link']) !!}</li>
                     <li>{!! link_to_route('login', 'Login', [], ['class' => 'nav-link']) !!}</li>
-                //</ul>
+                </ul>
                 
                 @endif
             </ul>

@@ -2,10 +2,11 @@
 
 @section('content')
 
-<!-- ここにページ毎のコンテンツを書く -->
-    <h1>タスク一覧</h1>
+@if (Auth::check())
 
-    @if (count($tasks) > 0)
+    <h1>{{ Auth::user()->name }}のタスク一覧</h1>
+    
+   @if (count($tasks) > 0)
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -25,8 +26,17 @@
             </tbody>
         </table>
     @endif
-    
+        
+        
         {!! link_to_route('tasks.create', '新規タスクの投稿', [], ['class' => 'btn btn-primary']) !!}
-
+        
+@else
+    <div class="center jumbotron">
+        <div class="text-center">
+            <h1>Welcome to the Tasklists</h1>
+            {!! link_to_route('signup.get', 'Sign up now!', [], ['class' => 'btn btn-lg btn-primary']) !!}
+        </div>
+    </div>
+@endif    
 
 @endsection
